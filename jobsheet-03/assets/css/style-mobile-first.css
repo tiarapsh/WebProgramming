@@ -1,0 +1,307 @@
+/* =========================================================
+   1. RESET & BASE (Default Mobile)
+   ========================================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #2b2b2b;
+    background-color: #f5f6f8;
+    line-height: 1.5;
+}
+
+a {
+    color: #236b43;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   2. HEADER & NAVIGATION (Default: Mobile Menu)
+   ========================================================= */
+header {
+    background-color: #236b43;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+header h1 {
+    font-size: 1.4rem;
+}
+
+/* Hamburger toggle secara default aktif di mobile */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: block;
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+    order: 2;
+}
+
+/* Navigasi tersembunyi secara default */
+header nav {
+    display: none;
+    width: 100%;
+    order: 3;
+    margin-top: 1rem;
+}
+
+.nav-toggle:checked ~ nav {
+    display: block;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+header nav a {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* =========================================================
+   3. LAYOUT, CARDS, & FORMS (Default: 1 Kolom / Full Width)
+   ========================================================= */
+main {
+    width: 100%;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: #236b43;
+}
+
+/* Kartu ringkasan: default 1 kolom */
+main section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+main section:nth-of-type(2) h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0.5rem;
+}
+
+main section:nth-of-type(2) article {
+    background-color: #eef4fa;
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+main section:nth-of-type(2) article h3 {
+    font-size: 0.95rem;
+    color: #55677a;
+    margin-bottom: 0.5rem;
+}
+
+main section:nth-of-type(2) article p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #236b43;
+}
+
+/* Tabel & overflow horizontal */
+.responsiveTable {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
+table {
+    width: 100%;
+    min-width: 500px;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid #e2e6ea;
+}
+
+thead {
+    background-color: #236b43;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f7f9fb;
+}
+
+tbody tr:hover {
+    background-color: #eef4fa;
+}
+
+td:last-child {
+    white-space: nowrap;
+}
+
+td button {
+    padding: 0.35rem 0.7rem;
+    margin-right: 0.35rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+td button:first-of-type {
+    background-color: #f0ad4e;
+    color: #fff;
+}
+
+td button:last-of-type {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+/* Pola responsive code block */
+pre {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre;
+    background-color: #1e293b;
+    color: #e2e8f0;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+/* Form input default 100% di layar HP */
+form p {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    color: #444;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid #cdd4da;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button[type="submit"] {
+    background-color: #236b43;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+form button[type="submit"]:hover {
+    background-color: #1a5a35;
+}
+
+footer {
+    text-align: center;
+    padding: 1.25rem;
+    color: #7a8794;
+    font-size: 0.9rem;
+}
+
+/* =========================================================
+   4. PROGRESSIVE ENHANCEMENT BREAKPOINTS (min-width)
+   ========================================================= */
+
+/* Tablet (≥ 481px) */
+@media (min-width: 481px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header nav {
+        display: flex;
+        width: auto;
+        order: 2;         
+        margin-top: 0;
+    }
+
+    header h1 {
+        order: 1;         
+    }
+
+    header nav ul {
+        flex-direction: row;
+        gap: 1.25rem;
+    }
+
+    main section:nth-of-type(2) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    form input,
+    form select {
+        max-width: 400px;
+    }
+
+    form button[type="submit"] {
+        width: auto;
+    }
+}
+
+/* Layar Desktop (≥ 900px) */
+@media (min-width: 900px) {
+    main {
+        max-width: 1000px;
+        margin: 2rem auto;
+        padding: 0 1.5rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    /* Kartu statistik beralih ke 3 kolom penuh */
+    main section:nth-of-type(2) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Layar Lebar / Ultra-wide (≥ 1400px) */
+@media (min-width: 1400px) {
+    main {
+        max-width: 1320px;
+    }
+}
