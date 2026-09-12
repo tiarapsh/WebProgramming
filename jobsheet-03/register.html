@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SIMPUS-Mini | Sign In</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>SIMPUS-Mini</h1>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books/list.html">Book List</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+    </header>
+
+    <main>
+      <section>
+        <h2>Registration New Member</h2>
+        <p>Fill in your details below to be a new member.</p>
+      </section>
+
+      <section>
+        <form action="#" method="get">
+          <p>
+            <label for="fullname">Full Name:</label><br />
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Enter your full name"
+              required
+            />
+          </p>
+          <p>
+            <label for="id_number">Student ID (NIM) / National ID (NIK):</label
+            ><br />
+            <input
+              type="text"
+              id="id_number"
+              name="id_number"
+              placeholder="Enter NIM or NIK"
+              required
+            />
+          </p>
+          <p>
+            <label for="study_program">Study Program / Department:</label><br />
+            <select id="study_program" name="study_program" required>
+              <option value="" disabled selected>Select Study Program</option>
+              <option value="ti">Teknik Informatika</option>
+              <option value="si">Sistem Informasi Bisnis</option>
+              <option value="te">Teknik Elektro</option>
+              <option value="an">Administrasi Niaga</option>
+            </select>
+          </p>
+          <p>
+            <label for="email">Email Address:</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter email address"
+              required
+            />
+          </p>
+          <p>
+            <label for="phone">Phone / WhatsApp Number:</label><br />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter phone number"
+              required
+            />
+          </p>
+          <p>
+            <label for="password">Password:</label><br />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Create a password"
+              required
+            />
+          </p>
+          <p>
+            <label for="confirm_password">Confirm Password:</label><br />
+            <input
+              type="password"
+              id="confirm_password"
+              name="confirm_password"
+              placeholder="Repeat your password"
+              required
+            />
+          </p>
+          <p>
+            <button type="submit">Submit Registration</button>
+          </p>
+          <p>Already registered? <a href="#">Sign in here</a></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 3</p>
+    </footer>
+  </body>
+</html>
